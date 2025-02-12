@@ -1,0 +1,13 @@
+$TTL 604800
+@   IN  SOA ns1.home.lab. admin.home.lab. (
+            2         ; Serial
+            604800    ; Refresh
+            86400     ; Retry
+            2419200   ; Expire
+            604800 )  ; Negative Cache TTL
+;
+@   IN  NS    ns1.home.lab.
+ns1 IN  A     10.1.1.10
+www IN  A     10.1.1.9
+mail IN  A     10.1.1.30
+@   IN  MX    30 mail.home.lab.
