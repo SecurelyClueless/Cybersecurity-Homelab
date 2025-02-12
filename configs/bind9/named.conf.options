@@ -1,0 +1,27 @@
+acl "trusted"{
+	10.1.1.0/24;
+	192.168.2.0/24;
+};
+
+options {
+	directory "/var/cache/bind";
+
+	// recursion no;	
+	forwarders {
+		8.8.8.8;
+		8.8.4.4;
+	};
+				
+	dnssec-validation auto;
+
+	listen-on-v6 { none; };
+	listen-on { 10.1.1.10; };
+	allow-query { trusted; };
+	
+	rate-limit{
+		responses-per-second 5;	
+	};
+	
+	querylog yes;
+	recursive-clients 100;
+};
