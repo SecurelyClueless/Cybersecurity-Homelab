@@ -1,0 +1,17 @@
+zone "home.lab"{
+	type master; // defines this as primary server
+	file "/etc/bind/db.home.lab"; // the dns record for home.lan will be stored here
+	allow-transfer { 10.1.1.3; };
+};
+
+zone "85.168.192.in-addr.arpa"{
+	type master;
+	file "/etc/bind/db.10.1.1";
+	allow-transfer { 10.1.1.3; };
+};
+
+zone "rish-infosec.local"{
+	type master;
+	file "/etc/bind/db.rish-infosec.local";
+	allow-transfer { 10.1.1.3; };
+};
