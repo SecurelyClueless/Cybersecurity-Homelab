@@ -1,0 +1,24 @@
+# Allow DNS (TCP & UDP) on port 53
+sudo ufw allow 53/tcp
+sudo ufw allow 53/udp
+
+# Allow Apache Secure (HTTPS - usually port 443)
+sudo ufw allow "Apache Secure"
+
+# Allow FTP on port 21
+sudo ufw allow 21/tcp
+
+# Allow port range 10000-10100 for TCP (FTP)
+sudo ufw allow 10000:10100/tcp
+
+# Allow SSH on port 22
+sudo ufw allow 22/tcp
+
+# Allow port 2222 for the 10.1.1.0/24 network (SSH)
+sudo ufw allow from 10.1.1.0/24 to any port 2222
+
+# Allow SSH (port 2222) for specific IP addresses
+sudo ufw allow from 192.168.137.1 to any port 2222/tcp
+
+# Allow outbound traffic for syslog (port 514) from 10.1.1.5 (Syslog)
+sudo ufw allow out from 10.1.1.5 to any port 514/tcp
