@@ -1,7 +1,5 @@
 # Cybersecurity Homelab
-Virtualized home lab simulating a small enterprise network using VMware.
-Includes Linux routing, AD/DNS/DHCP, web services, firewalling, monitoring, and security tooling.
-Built for hands-on learning in networking, system administration, and cybersecurity.
+Virtualized cybersecurity home lab with AD, DNS/DHCP, Linux servers, firewalling, monitoring, and security tooling.
 
 ![Cybersecurity](https://img.shields.io/badge/Cybersecurity-Homelab-blue.svg)
 
